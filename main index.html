@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mera Landing Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header / Navigation Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Logo Style */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        /* Hero / Main Heading Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1200/800') no-repeat center center/cover;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Main Heading */
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        /* Subheading */
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* Call to Action Button */
+        .btn {
+            display: inline-block;
+            background-color: #ff4757;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e84118;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header Section (Jahan Logo aur Menu hota hai) -->
+    <header>
+        <!-- Logo Text ya Image lagayein -->
+        <div class="logo">🚀 BDGWIN-PLAY</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section (Jahan Main Heading hoti hai) -->
+    <section class="hero">
+        <!-- Main Heading -->
+        <h1>Welcome to Bdgwin-play</h1>
+        <!-- Subheading -->
+        <p>Yahan aap jo chahein apne project ke baare mein likh sakte hain. Yeh aapka professional landing page hai.</p>
+        <!-- Button -->
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+</body>
+</html>

@@ -1,106 +1,228 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mera Landing Page</title>
+    <title>BDG Win Login</title>
     <style>
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
         }
 
-        /* Header / Navigation Style */
-        header {
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Top Header Buttons */
+        .top-header {
+            background-color: #4a4a4a;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+        }
+
+        .top-btn {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 8px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Main Navigation Bar */
+        .main-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
-            background-color: #333;
-            color: white;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        /* Logo Style */
-        .logo {
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            background-color: #f3a712;
+            color: #000;
+            font-weight: bold;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .brand-name {
             font-size: 24px;
             font-weight: bold;
-            letter-spacing: 1px;
+            color: #222;
         }
 
-        /* Navigation Links */
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 16px;
-        }
-
-        /* Hero / Main Heading Section */
-        .hero {
+        /* Hamburger Menu Icon */
+        .menu-icon {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1200/800') no-repeat center center/cover;
-            color: white;
-            padding: 20px;
+            gap: 5px;
+            cursor: pointer;
         }
 
-        /* Main Heading */
-        .hero h1 {
-            font-size: 48px;
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #00a2e8;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            color: #444;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        /* Banner Box Placeholder */
+        .banner-box {
+            background-color: #2b2b2b;
+            color: #d4af37;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 4px;
             margin-bottom: 20px;
         }
 
-        /* Subheading */
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
-        /* Call to Action Button */
-        .btn {
-            display: inline-block;
-            background-color: #ff4757;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+        .banner-title {
+            font-size: 32px;
             font-weight: bold;
-            transition: 0.3s;
+            border-top: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+            display: inline-block;
+            padding: 5px 20px;
+            letter-spacing: 1px;
         }
 
-        .btn:hover {
-            background-color: #e84118;
+        .banner-subtitle {
+            font-size: 20px;
+            margin-top: 15px;
+            color: #f3a712;
+            font-weight: bold;
+        }
+
+        /* CTA Register Button */
+        .cta-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #0096db;
+            color: white;
+            text-decoration: none;
+            padding: 12px 35px;
+            font-size: 18px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .info-table td {
+            border: 1px solid #777;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        .info-table td:first-child {
+            color: #555;
+            width: 45%;
+        }
+
+        .info-table td:last-child {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Description Text */
+        .description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+            text-align: justify;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. Header Section (Jahan Logo aur Menu hota hai) -->
-    <header>
-        <!-- Logo Text ya Image lagayein -->
-        <div class="logo">🚀 BDGWIN-PLAY</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+    <!-- Top Sticky/Header Buttons -->
+    <div class="top-header">
+        <button class="top-btn">Login</button>
+        <button class="top-btn">Register</button>
+    </div>
 
-    <!-- 2. Hero Section (Jahan Main Heading hoti hai) -->
-    <section class="hero">
-        <!-- Main Heading -->
-        <h1>Welcome to Bdgwin-play</h1>
-        <!-- Subheading -->
-        <p>Yahan aap jo chahein apne project ke baare mein likh sakte hain. Yeh aapka professional landing page hai.</p>
-        <!-- Button -->
-        <a href="#" class="btn">Get Started</a>
-    </sec
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="logo-section">
+            <div class="logo-box">BDG</div>
+            <div class="brand-name">BDG Win Login</div>
+        </div>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="container">
+        <h1 class="page-title">BDG Win Login</h1>
+
+        <!-- Image Banner (Simulated with CSS) -->
+        <div class="banner-box">
+            <div class="banner-title">BDG WIN</div>
+            <div class="banner-subtitle">Colour Prediction App</div>
+        </div>
+
+        <!-- Register Button -->
+        <div class="cta-container">
+            <a href="#" class="cta-btn">Register On BDG Win</a>
+        </div>
+
+        <!-- Details Table -->
+        <table class="info-table">
+            <tr>
+                <td>App Name</td>
+                <td>BDG Win</td>
+            </tr>
+            <tr>
+                <td>Invite Code</td>
+                <td>277755099619</td>
+            </tr>
+            <tr>
+                <td>Promotion Bonus</td>
+                <td>Up To ₹3650</td>
+            </tr>
+        </table>
+
+        <!-- Bottom Description -->
+        <p class="description">tggtt
+            Register on the BDG Win and know what it's like to make money on it. As you register, you

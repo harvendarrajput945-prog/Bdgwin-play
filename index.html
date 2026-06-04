@@ -1,48 +1,57 @@
-<!DOCTYPE html>
+
+           <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BDG Win Login</title>
+    <title>BDG Win Official - Login & Register</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #ffffff;
-            color: #333;
+            background-color: #1a1a1a; /* Dark Theme Background */
+            color: #ffffff;
+            line-height: 1.6;
         }
 
         /* Top Header Buttons */
         .top-header {
-            background-color: #4a4a4a;
+            background-color: #111111;
             display: flex;
             justify-content: space-between;
-            padding: 10px 15px;
+            padding: 12px 15px;
+            border-bottom: 2px solid #d4af37;
         }
 
         .top-btn {
             background-color: #d4af37;
-            color: white;
+            color: #000000;
             border: none;
-            padding: 8px 30px;
-            font-size: 16px;
-            border-radius: 4px;
+            padding: 8px 25px;
+            font-size: 15px;
+            border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .top-btn:hover {
+            background-color: #ffffff;
         }
 
         /* Main Navigation Bar */
         .main-nav {
+            background-color: #222222;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #333333;
         }
 
         .logo-section {
@@ -55,18 +64,17 @@
             background-color: #f3a712;
             color: #000;
             font-weight: bold;
-            padding: 5px 8px;
+            padding: 5px 10px;
             border-radius: 4px;
             font-size: 18px;
         }
 
         .brand-name {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
-            color: #222;
+            color: #ffffff;
         }
 
-        /* Hamburger Menu Icon */
         .menu-icon {
             display: flex;
             flex-direction: column;
@@ -84,25 +92,30 @@
         /* Main Content Container */
         .container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px 15px;
+            background-color: #222222; /* Dark Box for content */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .page-title {
-            font-size: 28px;
-            color: #444;
+            font-size: 26px;
+            color: #ffffff;
             margin-bottom: 20px;
-            font-weight: normal;
+            text-align: center;
+            font-weight: bold;
         }
 
-        /* Banner Box Placeholder */
+        /* Banner Box */
         .banner-box {
-            background-color: #2b2b2b;
+            background-color: #000000;
             color: #d4af37;
             text-align: center;
             padding: 40px 20px;
-            border-radius: 4px;
-            margin-bottom: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border: 1px solid #d4af37;
         }
 
         .banner-title {
@@ -125,48 +138,100 @@
         /* CTA Register Button */
         .cta-container {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .cta-btn {
             background-color: #0096db;
             color: white;
             text-decoration: none;
-            padding: 12px 35px;
+            padding: 14px 40px;
             font-size: 18px;
-            border-radius: 25px;
+            border-radius: 30px;
             display: inline-block;
-            font-weight: 500;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 150, 219, 0.4);
+            transition: 0.3s;
         }
 
-        /
+        .cta-btn:hover {
+            background-color: #00a2e8;
+            transform: scale(1.03);
+        }
+
+        /* Info Table */
+        .info-table {
+            width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            background-color: #111111;
         }
 
         .info-table td {
-            border: 1px solid #777;
-            padding: 12px;
+            border: 1px solid #333333;
+            padding: 14px;
             font-size: 16px;
         }
 
         .info-table td:first-child {
-            color: #555;
+            color: #aaa;
             width: 45%;
         }
 
         .info-table td:last-child {
             font-weight: bold;
-            color: #333;
+            color: #f3a712;
         }
 
-        /* Description Text */
-        .description {
+        /* Sections Style */
+        .section-title {
+            font-size: 20px;
+            color: #f3a712; /* Golden Headings like Landing Pages */
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-left: 4px solid #0096db;
+            padding-left: 10px;
+        }
+
+        .content-text {
             font-size: 15px;
-            color: #555;
-            line-height: 1.5;
+            color: #cccccc;
+            margin-bottom: 15px;
             text-align: justify;
+        }
+
+        .features-list {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #dddddd;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        .features-list strong {
+            color: #ffffff;
+        }
+
+        /* FAQ Box Style */
+        .faq-box {
+            background-color: #111111;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #333333;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: #aaaaaa;
         }
     </style>
 </head>
@@ -195,7 +260,7 @@
     <div class="container">
         <h1 class="page-title">BDG Win Login</h1>
 
-        <!-- Image Banner (Simulated with CSS) -->
+        <!-- Image Banner -->
         <div class="banner-box">
             <div class="banner-title">BDG WIN</div>
             <div class="banner-subtitle">Colour Prediction App</div>
@@ -222,6 +287,43 @@
             </tr>
         </table>
 
-        <!-- Bottom Description -->
-        <p class="description">tggtt
-            Register on the BDG Win and know what it's like to make money on it. As you register, you
+        <!-- Description -->
+        <p class="content-text">
+            Register on the BDG Win and know what it's like to make money on it. As you register, you will get access to various colour prediction games and exciting rewards.
+        </p>
+
+        <!-- Features Section -->
+        <h2 class="section-title">Key Features of BDG Win</h2>
+        <ul class="features-list">
+            <li><strong>Easy Registration:</strong> Quick sign-up process using your mobile number.</li>
+            <li><strong>Daily Bonuses:</strong> Get a chance to earn rewards and promotion bonuses up to ₹3650.</li>
+            <li><strong>Fast Withdrawals:</strong> Safe and secure payment methods with quick processing.</li>
+            <li><strong>24/7 Support:</strong> Dedicated customer care support for all users.</li>
+        </ul>
+
+        <!-- How to Play Section -->
+        <h2 class="section-title">How to Register and Play?</h2>
+        <p class="content-text">
+            1. Click on the <strong>Register On BDG Win</strong> button provided above.<br>
+            2. Enter your mobile number and set a strong password.<br>
+            3. Use the official Invite Code <strong>277755099619</strong> to claim your welcome bonus.<br>
+            4. Start exploring colour prediction games and enjoy.
+        </p>
+
+        <!-- FAQ Section -->
+        <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+        
+        <div class="faq-box">
+            <div class="faq-question">Q1: Is the BDG Win App safe to use?</div>
+            <div class="faq-answer">Ans: Yes, it uses secure encryption protocols to protect user data and financial transactions.</div>
+        </div>
+
+        <div class="faq-box">
+            <div class="faq-question">Q2: What is the official Invite Code?</div>
+            <div class="faq-answer">Ans: You can use the invite code 277755099619 during registration to unlock exclusive bonuses.</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

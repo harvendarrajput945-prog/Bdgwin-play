@@ -273,6 +273,278 @@
         <div class="cta-container">
             <a href="#" class="cta-btn">Register On BDG Win</a>
         </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDG Win Official - Login & Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a; /* Dark Theme Background */
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Top Header Buttons */
+        .top-header {
+            background-color: #111111;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .top-btn {
+            background-color: #d4af37;
+            color: #000000;
+            text-decoration: none;
+            padding: 8px 25px;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .top-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Main Navigation Bar */
+        .main-nav {
+            background-color: #222222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            background-color: #f3a712;
+            color: #000;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #00a2e8;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px 15px;
+            background-color: #222222; /* Dark Box for content */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .page-title {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Banner Box */
+        .banner-box {
+            background-color: #000000;
+            color: #d4af37;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border: 1px solid #d4af37;
+        }
+
+        .banner-title {
+            font-size: 32px;
+            font-weight: bold;
+            border-top: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+            display: inline-block;
+            padding: 5px 20px;
+            letter-spacing: 1px;
+        }
+
+        .banner-subtitle {
+            font-size: 20px;
+            margin-top: 15px;
+            color: #f3a712;
+            font-weight: bold;
+        }
+
+        /* CTA Register Button */
+        .cta-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            background-color: #0096db;
+            color: white;
+            text-decoration: none;
+            padding: 14px 40px;
+            font-size: 18px;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 150, 219, 0.4);
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #00a2e8;
+            transform: scale(1.03);
+        }
+
+        /* Info Table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            background-color: #111111;
+        }
+
+        .info-table td {
+            border: 1px solid #333333;
+            padding: 14px;
+            font-size: 16px;
+        }
+
+        .info-table td:first-child {
+            color: #aaa;
+            width: 45%;
+        }
+
+        .info-table td:last-child {
+            font-weight: bold;
+            color: #f3a712;
+        }
+
+        /* Sections Style */
+        .section-title {
+            font-size: 20px;
+            color: #f3a712; /* Golden Headings like Landing Pages */
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-left: 4px solid #0096db;
+            padding-left: 10px;
+        }
+
+        .content-text {
+            font-size: 15px;
+            color: #cccccc;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .features-list {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #dddddd;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        .features-list strong {
+            color: #ffffff;
+        }
+
+        /* FAQ Box Style */
+        .faq-box {
+            background-color: #111111;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #333333;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Sticky/Header Buttons -->
+    <div class="top-header">
+        <a href="https://bdgwinseo.com/#/" class="top-btn" target="_blank">Login</a>
+        <a href="https://bdgwinseo.com/#/" class="top-btn" target="_blank">Register</a>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="logo-section">
+            <div class="logo-box">BDG</div>
+            <div class="brand-name">BDG Win Login</div>
+        </div>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="container">
+        <h1 class="page-title">BDG Win Login</h1>
+
+        <!-- Image Banner -->
+        <div class="banner-box">
+            <div class="banner-title">BDG WIN</div>
+            <div class="banner-subtitle">Colour Prediction App</div>
+        </div>
+
+        <!-- Register Button -->
+        <div class="cta-container">
+            <a href="https://bdgwinseo.com/#/" class="cta-btn" target="_blank">Register On BDG Win</a>
+        </div>
 
         <!-- Details Table -->
         <table class="info-table">

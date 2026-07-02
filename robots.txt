@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harvendarrajput945-prog.github.io/Bdgwin-play/sitemap.xml
